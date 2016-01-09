@@ -1,5 +1,6 @@
 using Microsoft.Data.Entity;
 using System.Collections.Generic;
+using Microsoft.Extensions.PlatformAbstractions;
 
 namespace EFGetStarted.ConsoleApp.NewDb
 {
@@ -11,7 +12,8 @@ namespace EFGetStarted.ConsoleApp.NewDb
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // Use SQLite
-            optionsBuilder.UseSqlite(@"Data Source=EFGetStarted.ConsoleApp.NewDb.db");
+            var path = PlatformServices.Default.Application.ApplicationBasePath;
+            optionsBuilder.UseSqlite($"Data Source={path}/EFGetStarted.ConsoleApp.NewDb.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
