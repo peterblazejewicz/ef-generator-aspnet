@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0-*",
+  "description": "EFGetStarted.ConsoleApp.NewDb Console Application",
+  "authors": [
+    ""
+  ],
+  "tags": [
+    ""
+  ],
+  "projectUrl": "",
+  "licenseUrl": "",
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+  "tooling": {
+    "defaultNamespace": "EFGetStarted.ConsoleApp.NewDb"
+  },
+  "dependencies": {
+    "EntityFramework.Sqlite": "7.0.0-rc1-final",
+    "EntityFramework.Commands": "7.0.0-rc1-final",
+    "EntityFramework.Sqlite.Design": "7.0.0-rc1-final"
+  },
+  "commands": {
+    "EFGetStarted.ConsoleApp.NewDb": "EFGetStarted.ConsoleApp.NewDb",
+    "ef": "EntityFramework.Commands"
+  },
+  "frameworks": {
+    "dnx451": {},
+    "dnxcore50": {
+      "dependencies": {
+        "Microsoft.CSharp": "4.0.1-beta-23516",
+        "System.Collections": "4.0.11-beta-23516",
+        "System.Console": "4.0.0-beta-23516",
+        "System.Linq": "4.0.1-beta-23516",
+        "System.Threading": "4.0.11-beta-23516"
+      }
+    }
+  }
+}
