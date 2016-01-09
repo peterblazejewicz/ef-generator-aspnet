@@ -146,6 +146,25 @@ dnx ef database update
 Applying migration '20160109210506_MyFirstMigration'.
 Done.
 ```
+The EF creates following database:
+```
+.schema
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK_HistoryRow" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+CREATE TABLE "Blog" (
+    "BlogId" INTEGER NOT NULL CONSTRAINT "PK_Blog" PRIMARY KEY AUTOINCREMENT,
+    "Url" TEXT NOT NULL
+);
+CREATE TABLE "Post" (
+    "PostId" INTEGER NOT NULL CONSTRAINT "PK_Post" PRIMARY KEY AUTOINCREMENT,
+    "BlogId" INTEGER NOT NULL,
+    "Content" TEXT,
+    "Title" TEXT,
+    CONSTRAINT "FK_Post_Blog_BlogId" FOREIGN KEY ("BlogId") REFERENCES "Blog" ("BlogId") ON DELETE CASCADE
+);
+```
 
 ### Use your model
 
