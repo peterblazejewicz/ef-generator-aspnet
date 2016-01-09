@@ -54,6 +54,7 @@ dnu install EntityFramework.Sqlite
 
 ```
 dnu install EntityFramework.Commands
+dnu install EntityFramework.Sqlite.Design
 ```
 In the `project.json` commands add:
 ```
