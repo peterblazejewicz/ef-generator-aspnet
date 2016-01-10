@@ -31,6 +31,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a asp-controller="Blogs" asp-action="Index">Blogs</a></li>
                         <li><a asp-controller="Home" asp-action="About">About</a></li>
                         <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
                     </ul>
@@ -48,6 +49,8 @@
         <environment names="Development">
             <script src="~/lib/jquery/dist/jquery.js"></script>
             <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+            <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
             <script src="~/js/site.js" asp-append-version="true"></script>
         </environment>
         <environment names="Staging,Production">
@@ -58,6 +61,14 @@
             <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"
                     asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
                     asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
+            </script>
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"
+                    asp-fallback-src="~/lib/jquery-validation/dist/jquery.validate.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.validator">
+            </script>
+            <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"
+                    asp-fallback-src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive">
             </script>
             <script src="~/js/site.min.js" asp-append-version="true"></script>
         </environment>

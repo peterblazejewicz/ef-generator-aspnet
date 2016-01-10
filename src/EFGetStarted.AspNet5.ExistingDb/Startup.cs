@@ -7,18 +7,22 @@ using Microsoft.AspNet.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.PlatformAbstractions;
+using EFGetStarted.AspNet5.ExistingDb.Models;
+using Microsoft.Data.Entity;
 
 namespace EFGetStarted.AspNet5.ExistingDb
 {
     public class Startup
     {
-        public Startup(IHostingEnvironment env)
+        public Startup(IHostingEnvironment env, IApplicationEnvironment appEnv)
         {
             // Set up configuration sources.
             var builder = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json")
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
+            Configuration["Data:DefaultConnection:ConnectionString"] = $@"Data Source={appEnv.ApplicationBasePath}/EFGetStarted.AspNet5.ExistingDb.db";
         }
 
         public IConfigurationRoot Configuration { get; set; }
@@ -27,6 +31,10 @@ namespace EFGetStarted.AspNet5.ExistingDb
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            services.AddEntityFramework()
+                .AddSqlite()
+                .AddDbContext<BloggingContext>(options =>
+                    options.UseSqlite(Configuration["Data:DefaultConnection:ConnectionString"]));
             services.AddMvc();
         }
 
