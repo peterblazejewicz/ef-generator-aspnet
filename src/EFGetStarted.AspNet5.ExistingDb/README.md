@@ -2,6 +2,8 @@
 
 > In this walkthrough, you will build an ASP.NET 5 MVC application that performs basic data access using Entity Framework. You will use reverse engineering to create an Entity Framework model based on an existing database.
 
+[http://ef.readthedocs.org/en/latest/getting-started/aspnet5/existing-db.html](http://ef.readthedocs.org/en/latest/getting-started/aspnet5/existing-db.html#create-a-new-project)
+
 This example will use `generator-aspnet` and file based `SQLite`. The `generator-aspnet` will be used to scaffold all content.
 
 ## Documentation
