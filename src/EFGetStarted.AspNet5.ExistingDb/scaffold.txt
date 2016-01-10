@@ -1,0 +1,1 @@
+dnx ef dbcontext scaffold "filename=EFGetStarted.AspNet5.ExistingDb.db" EntityFramework.Sqlite --context BloggingContext --outputDir Models
