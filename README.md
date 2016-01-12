@@ -26,6 +26,15 @@ This example uses existing SQLite database and `generator-aspnet`. You will use 
 
 Written using VSCode on Mac OS X.
 
+## [ASP.NET 5 Application to New Database (Code First)](/src/EFGetStarted.AspNet5.NewDb)
+
+> In this walkthrough, you will build an ASP.NET 5 MVC application that performs basic data access using Entity Framework. You will use migrations to create the database from your model.
+
+This example uses basic web application scaffolded with `generator-aspnet` and file based `SQLite` database.
+
+Written using VSCode on Mac OS X.
+[TBD]
+
 ## [ASP.NET 5 Application to Existing Database (Database First)](/src/EFGetStarted.AspNet5.ExistingDb)
 
 > In this walkthrough, you will build an ASP.NET 5 MVC application that performs basic data access using Entity Framework. You will use reverse engineering to create an Entity Framework model based on an existing database.
