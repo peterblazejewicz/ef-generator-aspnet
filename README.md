@@ -33,7 +33,6 @@ Written using VSCode on Mac OS X.
 This example uses basic web application scaffolded with `generator-aspnet` and file based `SQLite` database.
 
 Written using VSCode on Mac OS X.
-[TBD]
 
 ## [ASP.NET 5 Application to Existing Database (Database First)](/src/EFGetStarted.AspNet5.ExistingDb)
 
